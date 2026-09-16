@@ -39,20 +39,23 @@
                 <h2>Lasanha de Carne Moida</h2>
                 <p>Hoje receita De: Fernanda Carvalho da Fonseca</p>
                 <p>Também conhecida como lasanha à bolonhesa, pela sua origem em Bolonha, na Itália, essa receita conquistou o mundo!</p>
-                <button>👍 <span>0</span></button>
+                <button>😍 <span>0</span></button>
+                <button>🤮 <span>0</span></button>
 
             </div>
         </main>
     
 </body>
 <script>
-    const boton = document.querySelector("button");
-    boton.addEventListener("click", botonclicado);
+   const botones = document.querySelectorAll("button");
+   botones.forEach(function (boton){
+       boton.addEventListener("click", botonclicado);
        function botonclicado(){
-            console.log("fui clicado");
-            let texto= boton.querySelector("span");
-            texto.textContent++;
-        }
+               console.log("fui clicado");
+               let texto= boton.querySelector("span");
+               texto.textContent++;
+           }
+    })
 
 </script>
 </html>
