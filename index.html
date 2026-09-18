@@ -1,60 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Receitas</title>
-        <style>
-            header {
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                background-color: #ACC8E5;
-                color: #112A46;
-                border: 5px solid #010725}
-            main {
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                background-color: #112A46;
-                color:#f8f8f8;
-                display: flex;
-            }
-            img {
-                width: 500px;
-                height: 200px;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Blog de Receitas</h1>
-            <p>Compilação de receitas de diferentes autores</p>
-            <p>Pagina por: Elian Gomez</p>
-        </header>
-        <main>
-            <img src="lasanha.png" alt="Fatia de lasanha à bolonhesa em prato branco sobre mesa escura. Exibe camadas fartas de carne e massa, com topo de queijo perfeitamente gratinado e salsa fresca salpicada.">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <style>
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ACC8E5;
+            color: #112A46;
+            border: 5px solid #010725
+        }
+
+        .Ingredientes {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ACC8E5;
+            color: #0b1c30;
+        }
+
+        .lista {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            gap: 50px;
+        }
+
+        main {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #112A46;
+            color: #f8f8f8;
+        }
+
+        article {
+
+            display: flex;
+        }
+
+        img {
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Blog de Receitas</h1>
+        <p>Compilação de receitas de diferentes autores</p>
+        <p>Pagina por: Elian Gomez</p>
+    </header>
+    <main>
+        <article>
+            <img src="lasanha.png"
+                alt="Fatia de lasanha à bolonhesa em prato branco sobre mesa escura. Exibe camadas fartas de carne e massa, com topo de queijo perfeitamente gratinado e salsa fresca salpicada.">
             <div>
                 <h2>Lasanha de Carne Moida</h2>
                 <p>Hoje receita De: Fernanda Carvalho da Fonseca</p>
-                <p>Também conhecida como lasanha à bolonhesa, pela sua origem em Bolonha, na Itália, essa receita conquistou o mundo!</p>
+                <p>Também conhecida como lasanha à bolonhesa, pela sua origem em Bolonha, na Itália, essa receita
+                    conquistou
+                    o mundo!</p>
                 <button>😍 <span>0</span></button>
                 <button>🤮 <span>0</span></button>
 
             </div>
-        </main>
-    
+        </article>
+
+        <div class="Ingredientes">
+            <h1>Ingredientes</h1>
+        </div>
+        <article class="lista">
+            <div>
+                <ul>
+                    <li>500 g de massa de lasanha</li>
+                    <li>500 g de carne moída</li>
+                    <li>2 caixas de creme de leite</li>
+                    <li>3 colheres de manteiga</li>
+                    <li>3 colheres de farinha de trigo</li>
+                    <li>500 g de presunto</li>
+                    <li>500 g de mussarela</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>sal a gosto</li>
+                    <li>2 copos de leite</li>
+                    <li>1 cebola ralada</li>
+                    <li>3 colheres de óleo</li>
+                    <li>1 caixa de molho de tomate</li>
+                    <li>3 dentes de alho amassados</li>
+                    <li>1 pacote de queijo ralado</li>
+                </ul>
+            </div>
+    </main>
+    </article>
+
 </body>
 <script>
-   const botones = document.querySelectorAll("button");
-   botones.forEach(function (boton){
-       boton.addEventListener("click", botonclicado);
-       function botonclicado(){
-               console.log("fui clicado");
-               let texto= boton.querySelector("span");
-               texto.textContent++;
-           }
+    const botones = document.querySelectorAll("button");
+    botones.forEach(function (boton) {
+        boton.addEventListener("click", botonclicado);
+        function botonclicado() {
+            console.log("fui clicado");
+            let texto = boton.querySelector("span");
+            texto.textContent++;
+        }
     })
+
 </script>
+
 </html>
