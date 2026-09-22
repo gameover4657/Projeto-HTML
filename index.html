@@ -107,12 +107,19 @@
     const botones = document.querySelectorAll("button");
     botones.forEach(function (boton) {
         boton.addEventListener("click", botonclicado);
+        let curtiu = false;
         function botonclicado() {
             console.log("fui clicado");
             let texto = boton.querySelector("span");
-            texto.textContent++;
-        }
-    })
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } 
+            else {
+                texto.textContent--;
+                curtiu = false;}
+ }
+    });
 
 </script>
 
